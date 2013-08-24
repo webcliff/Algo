@@ -1,5 +1,5 @@
 	// Want to enumerate all rearrangements:
-	// ABC permutes to ABC,ABC,BAC,BCA,CAB,CBA
+	// ABC permutes to ABC,ACB,BAC,BCA,CAB,CBA
 	//////////////
 	//
 	// Solution 1
