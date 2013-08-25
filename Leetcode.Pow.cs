@@ -1,7 +1,8 @@
-  //
-  // Implement pow(x, n)
-  // http://leetcode.com/onlinejudge#question_50
-  //
+
+	//
+	// Implement pow(x, n)
+	// http://leetcode.com/onlinejudge#question_50
+	//
 	public double Pow(double x, int n) {
 		if(n==0) return 1.0;
 		if(n==1) return x;
@@ -13,7 +14,7 @@
 		return p*p*Pow(x,j);
 	}
 
-  // x^7 = x^4 * x^2 * x^1
+	// x^7 = x^4 * x^2 * x^1
 	public double PowIteratively(double x, int n) {
 		int m=n<0 ? n*-1 : n;
 		double p=1.0;
