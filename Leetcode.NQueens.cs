@@ -62,3 +62,21 @@
 		return true;
 	}
 
+	private List<List<string>> Convert(List<List<int>> placements) {
+		const char QUEEN = 'Q', EMPTY='.';
+		List<List<string>> solutions = new List<List<string>>(placements.Count);
+		foreach(List<int> placement in placements) {
+			List<string> solution = new List<string>(placement.Count);
+			foreach(int i in placement) {
+				StringBuilder sb = new StringBuilder();
+				int k=0;
+				while(k<i) { sb.Append(EMPTY); k++; }
+				sb.Append(QUEEN);
+				k+=1;
+				while(k<placement.Count) { sb.Append(EMPTY); k++; }
+				solution.Add(sb.ToString());
+			}
+			solutions.Add(solution);
+		}
+		return solutions;
+	}
