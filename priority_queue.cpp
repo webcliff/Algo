@@ -7,8 +7,8 @@
 namespace algo {
 
 template <typename T,
-		  typename Container = std::vector<T>,
-		  typename Compare = std::greater<typename Container::value_type> >
+	  typename Container = std::vector<T>,
+	  typename Compare = std::greater<typename Container::value_type> >
 class priority_queue {
 public:
 	priority_queue() : heap(),compare() {
