@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 
+// A Minimal Queue
 public class PriorityQueue<T> where T : IComparable<T>, new() {
 	
 	private List<T> mHeap;
@@ -56,7 +57,8 @@ public class PriorityQueue<T> where T : IComparable<T>, new() {
 		if(rc<mHeap.Count && mHeap[lc].CompareTo(mHeap[rc])>0) lc=rc;
 
 		if(mHeap[i].CompareTo(mHeap[lc])>0) swap(mHeap,i,lc);
-
+		
+		// Recusive for clean code
 		MoveDown(lc);
 	}
 
