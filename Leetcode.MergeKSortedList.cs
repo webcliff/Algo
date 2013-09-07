@@ -13,7 +13,7 @@ public class Test {
 	// Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 	// 
 	// Memory : O(K)
-	// Time : O(NlogN)
+	// Time : O(NlogK)
 	public Node MergeKSortedList(List<Node> sortedList) {
 		PriorityQueue<Node> pq = new PriorityQueue<Node>(sortedList.Count);
 
