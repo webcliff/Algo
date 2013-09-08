@@ -15,6 +15,8 @@
 	// If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.
 
 	// If no valid conversion could be performed, a zero value is returned. If the correct value is out of the range of representable values, INT_MAX (2147483647) or INT_MIN (-2147483648) is returned.
+	/////////////////////
+	// Solution 1
 	//
 	public int atoi(string a) {
 		if(a==null) return 0;
@@ -63,3 +65,13 @@
 		Console.WriteLine(new Test().atoi("-2147483648"));
 		Console.WriteLine(new Test().atoi("-2147483649"));
 	}
+
+
+	/////////////////////
+	// Solution 2
+	//////////////////
+	// Might be cleaner if dividing parsing into:
+	// 1. remove white space
+	// 2. read sign
+	// 3. read digits
+	// 4. read chars after diogits.
