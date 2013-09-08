@@ -31,12 +31,11 @@
 		if(j==p.Length) return false;
 
 		if(j<p.Length-1&&p[j+1]=='*') {
-			if(p[j]=='.') return true;
 			if(p[j]=='*') throw new ArgumentException("p");
 			int t=i;
 			while(true) {
 				if(IsMatch(s,t,p,j+2)) return true;
-				if(t<s.Length&&s[t]==p[j]) ++t;
+				if(t<s.Length&&(s[t]==p[j]||p[j]=='.')) ++t;
 				else return false;
 			}
 		}
