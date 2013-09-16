@@ -4,6 +4,13 @@
 	// Given a string S, find the longest palindromic substring in S. 
 	// You may assume that the maximum length of S is 1000, and there 
 	// exists one unique longest palindromic substring.
+	////////////////////////
+	// DP
+	// f(i,j) -> true if S[i]~S[j] is palindrome
+	// f(i,i) = true
+	// f(i,i+1) = S[i]==S[i+1]
+	// f(i,j) = f(i+1,j-1) && S[i]==S[j]
+	//
 	public string FindLongestPalindromicSubstring(string S) {
 		if(S==null) throw new ArgumentNullException("S");
 		if(S.Length<2) return S;
