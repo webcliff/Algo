@@ -58,6 +58,7 @@ public class Test {
 	//  ...
 	//  for f(1), there are N-2 elements to subset, complxity is O(2^N-2)
 	// f(0) = O(2^N-2 + 2^N-3 + ... + 2^0) = O(2^N-1) = O(2^N)
+	// CLRS 3rd page 1147
 	private void GetSubSet(List<char> s, int start,List<List<char>> ss, List<char> sofar) {
 		if(start==s.Count) return;
 
