@@ -4,26 +4,6 @@ using System.Collections.Generic;
 
 public class Test {
 
-	public static void Main() {
-		List<char> s = new List<char>();
-		s.Add('2');s.Add('3');s.Add('4');
-		List<List<char>> ss  = new Test().GetSubSet(s);
-		Dump(ss);
-	}
-
-	public static void Dump<T>(List<List<T>> lists) {
-		foreach(List<T> list in lists) {
-			Dump(list);
-		}
-	}
-
-	public static void Dump<T>(List<T> list) {
-		foreach(T t in list) {
-			Console.Write(t + " ");
-		}
-		Console.WriteLine();
-	}
-
 	// Subsets
 	// Given a set of distinct integers, S, return all possible subsets.
 
@@ -68,5 +48,25 @@ public class Test {
 			GetSubSet(s,i+1,ss,sofar);
 			sofar.RemoveAt(sofar.Count-1);
 		}
+	}
+
+	public static void Main() {
+		List<char> s = new List<char>();
+		s.Add('2');s.Add('3');s.Add('4');
+		List<List<char>> ss  = new Test().GetSubSet(s);
+		Dump(ss);
+	}
+
+	public static void Dump<T>(List<List<T>> lists) {
+		foreach(List<T> list in lists) {
+			Dump(list);
+		}
+	}
+
+	public static void Dump<T>(List<T> list) {
+		foreach(T t in list) {
+			Console.Write(t + " ");
+		}
+		Console.WriteLine();
 	}
 }  
