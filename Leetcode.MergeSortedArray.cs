@@ -9,7 +9,7 @@
 	public void MergeSortedArrays(int[] A, int AL, int[] B, int BL) {
 		if(A==null||B==null) throw new ArgumentNullException("A and/or B");
 		if(AL>A.Length||BL>B.Length||AL<0||BL<0) throw new ArgumentNullException("AL and/or BL");
-		if(AL+BL>A.Length) throw new ArgumentException("A does not have extra space");
+		if(AL+BL>A.Length) throw new ArgumentException("A does not have enough extra space");
 
 		int i=AL+BL-1;
 		--AL;--BL;
