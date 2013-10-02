@@ -19,7 +19,7 @@
 	// 	int[] AA3 = {-1,-5};
 	// 	int[] AA4 = {4,6,7,8};
 
-	public int MaximumSubarray(int[] A) {
+	public int MaximumSubarray_DP(int[] A) {
 		if(A==null||A.Lenght<1) throw new ArgumentNullException();
 
 		if(A.Length==1) return A[0];
@@ -34,3 +34,21 @@
 		return max;
 	}
 
+	//
+	// Solution 2 : scan with two pointers
+	//
+	public int MaximumSubarray(int[] A) {
+		if(A==null) throw new ArgumentNullException("A");
+		if(A.Length==0) throw new ArgumentException("A");
+
+		int l=0,r=0,max=A[0],sum=A[0];
+		while(r<A.Length) {
+			if(l==r) sum=A[l];
+			else if(sum<=0) { l=r; sum=A[l]; }
+			else if(sum+A[r]>0) sum+=A[r];
+			else { l=r; sum=A[l]; }
+			++r;
+			max=Math.Max(max,sum);
+		}
+		return max;
+	}
