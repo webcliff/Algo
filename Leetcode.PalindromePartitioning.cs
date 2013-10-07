@@ -10,7 +10,9 @@ Return
     ["aa","b"],
     ["a","a","b"]
   ]
-  */
+*/
+  
+// O(2^N) - basically there are 2^N eays to divide string.
 public List<List<string>> PalindromePartitioning(string S, int start, List<List<string>> output, List<string> sofar) {
 	if(start>=S.Length) {
 		output.Add(new List<string>(soFar));
