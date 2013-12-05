@@ -22,3 +22,7 @@
 		max=Math.Max(max,l); 
 		return max;
 	}
+
+
+// does not work
+// repro case: abba
